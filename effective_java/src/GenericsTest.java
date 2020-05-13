@@ -5,8 +5,12 @@ public class GenericsTest {
 	
 	public static void main(String[] args) {
 		List<?> list = new ArrayList<String>();
-//		list.add("abc");						// ÄÄÆÄÀÏ ¿À·ù ¹ß»ı
-		((ArrayList<String>)list).add("abc");	// Çü º¯È¯ ½Ã °¡´É
+		// List<?> list = new ArrayList<?>();	// ë¶ˆê°€ëŠ¥, ì´ë ‡ê²Œ ì“¸ê±°ë©´
+		// List<?> list = new ArrayList<>();	// ì°¨ë¼ë¦¬ ì´ë ‡ê²Œë‚˜
+		// List<?> list = new ArrayList();	// ì´ë ‡ê²Œ ì¨ì•¼ í•¨
+		
+//		list.add("abc");			// ì»´íŒŒì¼ ì˜¤ë¥˜ ë°œìƒ
+		((ArrayList<String>)list).add("abc");	// í˜• ë³€í™˜ ì‹œ ê°€ëŠ¥
 		
 		System.out.println(list.get(0));
 	}
